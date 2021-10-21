@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", ()=> {
     if(validRegex.test(email.value)) {
         errorImage.style.display = "none";
         errorMessage.style.display = "none";
-        email.style.border = "";
+        email.style.border = "2px solid #3ded57";
     } else {
         errorImage.style.display = "flex";
         errorMessage.style.display = "flex";

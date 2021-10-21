@@ -3,19 +3,21 @@ const submitBtn = document.getElementById("submit-btn");
 
 // EVENTLISTENERS
 submitBtn.addEventListener("click", ()=> {
-    let email = document.getElementById("email-address").value;
+    let email = document.getElementById("email-address");
     const validRegex = /^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
     const errorImage = document.getElementById("error-img");
     const errorMessage = document.getElementById("error-message");
 
 
-    if(validRegex.test(email)) {
+    if(validRegex.test(email.value)) {
         errorImage.style.display = "none";
         errorMessage.style.display = "none";
+        email.style.border = "";
     } else {
         errorImage.style.display = "flex";
         errorMessage.style.display = "flex";
         errorMessage.style.transition = "2.5ms all ease-in-out";
+        email.style.border = "2px solid #f96464";
     }
 }
 )
